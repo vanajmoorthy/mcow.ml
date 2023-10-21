@@ -176,6 +176,8 @@ module.exports = (app) => {
 					.digest("hex")
 					.substring(0, 7)
 				: req.body.short;
+
+		console.log(short)
 		const type =
 			req.body.short === "" ||
 				req.body.short === null ||
@@ -219,8 +221,8 @@ module.exports = (app) => {
 		}
 
 		let hasUrlBeenShortened = true;
-		let shortenedURL = `${req.protocol}://${req.get("host")}${req.originalUrl}${short}`;
-		console.log(shortenedURL);
+		let shortenedURL = `${req.protocol}://${req.get("host")}${req.originalUrl}/${short}`;
+		console.log("s" + shortenedURL);
 
 		let shortened = `mcow.ml/${short}`;
 		let isUserAuthenticated = req.isAuthenticated() || false;
