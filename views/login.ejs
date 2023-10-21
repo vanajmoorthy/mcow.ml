@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#29263e">
+
+    <title>mcow.ml</title>
+    <meta name="title" content="mcow.ml">
+    <meta name="description" content="A simple, secure, and open-source URL shortener!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mcow.ml/">
+    <meta property="og:title" content="mcow.ml">
+    <meta property="og:description" content="A simple, secure, and open-source URL shortener!">
+    <meta property="og:image" itemprop="image" content="logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mcow.ml/">
+    <meta property="twitter:title" content="mcow.ml">
+    <meta property="twitter:description" content="A simple, secure, and open-source URL shortener!">
+    <meta property="twitter:image" content="logo.png">
+
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.typekit.net/jdq7cig.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <main>
+        <div class="flex">
+
+            <div class="form-and-title">
+                <div class="heading">
+
+                    <div>
+                        <a href="/" id="home">
+                            <img id="cow" class="cow" src="../logo.png" alt="cow image">
+
+                            <h1>mcow.ml</h1>
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="login">
+                <h1 class="login-title">Login</h1>
+                <%=error%>
+                <form class="login-form" action="/login" method="post">
+                    <input type="email" name="email" id="email" placeholder="Enter email" required>
+
+                    <input type="password" name="password" id="password" placeholder="Enter password" required>
+
+                    <input class="login-button" type="submit" value="LOGIN" class="login-button">
+                </form>
+                <p>Not a member? <a class="sign-up-link" href="/signup">Sign up</a> now!</p>
+            </div>
+
+            <footer>
+                <p>made by <a class="footer-link" href="https://vanajmoorthy.com" target="_blank"
+                        rel="noopener noreferrer">vanaj
+                        moorthy</a></p>
+                <p>get source <a class=" footer-link orange" href="https://theorangeyak.co" target="_blank"
+                        rel="noopener noreferrer">here
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </main>
+
+</html>
