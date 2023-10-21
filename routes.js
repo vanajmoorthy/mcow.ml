@@ -221,8 +221,8 @@ module.exports = (app) => {
 		}
 
 		let hasUrlBeenShortened = true;
-		let shortenedURL = `${req.protocol}://${req.get("host")}${req.originalUrl}/${short}`;
-		console.log("s" + shortenedURL);
+		let shortenedURL = `${req.protocol}://${req.get("host")}/${short}`;
+		console.log(shortenedURL);
 
 		let shortened = `mcow.ml/${short}`;
 		let isUserAuthenticated = req.isAuthenticated() || false;
