@@ -113,7 +113,7 @@ module.exports = (app) => {
 
 	app.get("/login", (req, res) => {
 		console.log(req.flash("error"));
-		console.log("logg")
+		console.log("logg");
 		res.render("login", { error: req.flash("error") });
 	});
 
@@ -177,7 +177,7 @@ module.exports = (app) => {
 					.substring(0, 7)
 				: req.body.short;
 
-		console.log(short)
+		console.log(short);
 		const type =
 			req.body.short === "" ||
 				req.body.short === null ||
@@ -221,8 +221,15 @@ module.exports = (app) => {
 		}
 
 		let hasUrlBeenShortened = true;
-		let shortenedURL = `${req.protocol}://${req.get("host")}/${short}`;
-		console.log(shortenedURL);
+
+		let host = req.get("host");
+
+		if (host.endsWith("/shorten")) {
+			host = host.slice(0, -"/shorten".length);
+		}
+
+
+		let shortenedURL = `${req.protocol}://${host}/${short}`;
 
 		let shortened = `mcow.ml/${short}`;
 		let isUserAuthenticated = req.isAuthenticated() || false;
