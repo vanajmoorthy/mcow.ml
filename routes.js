@@ -231,7 +231,7 @@ module.exports = (app) => {
 
 		let shortenedURL = `${req.protocol}://${host}/${short}`;
 
-		let shortened = `mcow.ml/${short}`;
+		let shortened = `m.vanaj.io/${short}`;
 		let isUserAuthenticated = req.isAuthenticated() || false;
 
 		res.render("index", {

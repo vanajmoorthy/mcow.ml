@@ -53,81 +53,83 @@
             </div>
 
             <% if(Object.keys(links).length < 1) { %>
-            <h1 id="nothing">Nothing to show yet. <a class="underline" href="/">Start shortening!</a></h1>
-            <% } %>
+                <h1 id="nothing">Nothing to show yet. <a class="underline" href="/">Start shortening!</a></h1>
+                <% } %>
 
-            <% for(var i=0; i < Object.keys(links).length; i++) {%>
-            <div class="link-card">
+                    <% for(var i=0; i < Object.keys(links).length; i++) {%>
+                        <div class="link-card">
 
-                <div class="card-top">
-                    <h1 class="serial-number">
-                        <%=i+1%>
-                    </h1>
-                    <h1 class="short-link">
-                        <a href="https://mcow.ml/<%= links[i].short %>" target="_blank" rel="noopener noreferrer">
-                            mcow.ml/<%= links[i].short %>
-                        </a>
-                    </h1>
-                </div>
+                            <div class="card-top">
+                                <h1 class="serial-number">
+                                    <%=i+1%>
+                                </h1>
+                                <h1 class="short-link">
+                                    <a href="https://m.vanaj.io/<%= links[i].short %>" target="_blank"
+                                        rel="noopener noreferrer">
+                                        mcow.ml/<%= links[i].short %>
+                                    </a>
+                                </h1>
+                            </div>
 
-                <div class="card-body">
-                    <p class="long-link">
-                        <svg class="blue-glyphs" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" style="fill:rgba(130, 187, 207, 1);transform:;-ms-filter:">
-                            <path
-                                d="M4.222 19.778c.975.975 2.255 1.462 3.535 1.462 1.281-.001 2.562-.487 3.536-1.462l2.828-2.829-1.414-1.414-2.828 2.829c-1.169 1.167-3.072 1.169-4.243 0-1.169-1.17-1.169-3.073 0-4.243l2.829-2.828L7.051 9.879l-2.829 2.828C2.273 14.656 2.273 17.829 4.222 19.778zM19.778 11.293c1.948-1.949 1.948-5.122 0-7.071-1.95-1.95-5.123-1.948-7.071 0L9.879 7.051l1.414 1.414 2.828-2.829c1.17-1.167 3.073-1.169 4.243 0 1.169 1.17 1.169 3.073 0 4.243l-2.829 2.828 1.414 1.414L19.778 11.293z">
-                            </path>
-                            <path transform="rotate(-134.999 12 12)" d="M11 5.999H13V18H11z"></path>
-                        </svg> <a href="<%=links[i].long%>" target="_blank" rel="noopener noreferrer">
-                            <%= links[i].long %>
-                        </a>
-                    </p>
+                            <div class="card-body">
+                                <p class="long-link">
+                                    <svg class="blue-glyphs" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" style="fill:rgba(130, 187, 207, 1);transform:;-ms-filter:">
+                                        <path
+                                            d="M4.222 19.778c.975.975 2.255 1.462 3.535 1.462 1.281-.001 2.562-.487 3.536-1.462l2.828-2.829-1.414-1.414-2.828 2.829c-1.169 1.167-3.072 1.169-4.243 0-1.169-1.17-1.169-3.073 0-4.243l2.829-2.828L7.051 9.879l-2.829 2.828C2.273 14.656 2.273 17.829 4.222 19.778zM19.778 11.293c1.948-1.949 1.948-5.122 0-7.071-1.95-1.95-5.123-1.948-7.071 0L9.879 7.051l1.414 1.414 2.828-2.829c1.17-1.167 3.073-1.169 4.243 0 1.169 1.17 1.169 3.073 0 4.243l-2.829 2.828 1.414 1.414L19.778 11.293z">
+                                        </path>
+                                        <path transform="rotate(-134.999 12 12)" d="M11 5.999H13V18H11z"></path>
+                                    </svg> <a href="<%=links[i].long%>" target="_blank" rel="noopener noreferrer">
+                                        <%= links[i].long %>
+                                    </a>
+                                </p>
 
-                    <p class="clicks">
-                        <svg class="blue-glyphs" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" style="fill:rgba(130, 187, 207, 1);transform:;-ms-filter:">
-                            <path
-                                d="M11.975,22H12c3.859,0,7-3.14,7-7V9c0-3.841-3.127-6.974-6.981-7C12.013,2,12.006,2,12,2c-0.002,0-0.016,0-0.018,0 c-0.009,0-0.016,0-0.023,0C8.119,2.022,5,5.157,5,9v6C5,18.86,8.129,22,11.975,22z M7,9c0-2.751,2.238-4.994,4.985-5 C14.75,4.006,17,6.249,17,9v6c0,2.757-2.243,5-5,5h-0.025C9.186,20,7,17.804,7,15V9z">
-                            </path>
-                            <path d="M11 6H13V12H11z"></path>
-                        </svg>
-                        <%= links[i].clicks %> clicks
-                    </p>
+                                <p class="clicks">
+                                    <svg class="blue-glyphs" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" style="fill:rgba(130, 187, 207, 1);transform:;-ms-filter:">
+                                        <path
+                                            d="M11.975,22H12c3.859,0,7-3.14,7-7V9c0-3.841-3.127-6.974-6.981-7C12.013,2,12.006,2,12,2c-0.002,0-0.016,0-0.018,0 c-0.009,0-0.016,0-0.023,0C8.119,2.022,5,5.157,5,9v6C5,18.86,8.129,22,11.975,22z M7,9c0-2.751,2.238-4.994,4.985-5 C14.75,4.006,17,6.249,17,9v6c0,2.757-2.243,5-5,5h-0.025C9.186,20,7,17.804,7,15V9z">
+                                        </path>
+                                        <path d="M11 6H13V12H11z"></path>
+                                    </svg>
+                                    <%= links[i].clicks %> clicks
+                                </p>
 
-                    <p class="date">
-                        <svg class="blue-glyphs" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            viewBox="0 0 24 24" style="fill:rgba(130, 187, 207, 1);transform:;-ms-filter:">
-                            <path
-                                d="M19,4h-2V2h-2v2H9V2H7v2H5C3.897,4,3,4.897,3,6v2v12c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V8V6 C21,4.897,20.103,4,19,4z M19.002,20H5V8h14L19.002,20z">
-                            </path>
-                            <path d="M11 17.414L16.707 11.707 15.293 10.293 11 14.586 8.707 12.293 7.293 13.707z">
-                            </path>
-                        </svg>
-                        <%= links[i].date %>
-                    </p>
-                </div>
-            </div>
-            <% } %>
+                                <p class="date">
+                                    <svg class="blue-glyphs" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" style="fill:rgba(130, 187, 207, 1);transform:;-ms-filter:">
+                                        <path
+                                            d="M19,4h-2V2h-2v2H9V2H7v2H5C3.897,4,3,4.897,3,6v2v12c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V8V6 C21,4.897,20.103,4,19,4z M19.002,20H5V8h14L19.002,20z">
+                                        </path>
+                                        <path
+                                            d="M11 17.414L16.707 11.707 15.293 10.293 11 14.586 8.707 12.293 7.293 13.707z">
+                                        </path>
+                                    </svg>
+                                    <%= links[i].date %>
+                                </p>
+                            </div>
+                        </div>
+                        <% } %>
 
-            <a id="log-out" href="/logout">Log Out
-                <span id="log-out-glyph"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:;-ms-filter:">
-                        <path d="M2 12L7 16 7 13 16 13 16 11 7 11 7 8z"></path>
-                        <path
-                            d="M13.001,2.999c-2.405,0-4.665,0.937-6.364,2.637L8.051,7.05c1.322-1.322,3.08-2.051,4.95-2.051s3.628,0.729,4.95,2.051 s2.051,3.08,2.051,4.95s-0.729,3.628-2.051,4.95s-3.08,2.051-4.95,2.051s-3.628-0.729-4.95-2.051l-1.414,1.414 c1.699,1.7,3.959,2.637,6.364,2.637s4.665-0.937,6.364-2.637c1.7-1.699,2.637-3.959,2.637-6.364s-0.937-4.665-2.637-6.364 C17.666,3.936,15.406,2.999,13.001,2.999z">
-                        </path>
-                    </svg></span>
-            </a>
+                            <a id="log-out" href="/logout">Log Out
+                                <span id="log-out-glyph"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:;-ms-filter:">
+                                        <path d="M2 12L7 16 7 13 16 13 16 11 7 11 7 8z"></path>
+                                        <path
+                                            d="M13.001,2.999c-2.405,0-4.665,0.937-6.364,2.637L8.051,7.05c1.322-1.322,3.08-2.051,4.95-2.051s3.628,0.729,4.95,2.051 s2.051,3.08,2.051,4.95s-0.729,3.628-2.051,4.95s-3.08,2.051-4.95,2.051s-3.628-0.729-4.95-2.051l-1.414,1.414 c1.699,1.7,3.959,2.637,6.364,2.637s4.665-0.937,6.364-2.637c1.7-1.699,2.637-3.959,2.637-6.364s-0.937-4.665-2.637-6.364 C17.666,3.936,15.406,2.999,13.001,2.999z">
+                                        </path>
+                                    </svg></span>
+                            </a>
 
-            <footer>
-                <p>made by <a class="footer-link" href="https://vanajmoorthy.com" target="_blank"
-                        rel="noopener noreferrer">vanaj
-                        moorthy</a></p>
-                <p>get source <a class=" footer-link orange" href="https://theorangeyak.co" target="_blank"
-                        rel="noopener noreferrer">here
-                    </a>
-                </p>
-            </footer>
+                            <footer>
+                                <p>made by <a class="footer-link" href="https://vanajmoorthy.com" target="_blank"
+                                        rel="noopener noreferrer">vanaj
+                                        moorthy</a></p>
+                                <p>get source <a class=" footer-link orange" href="https://theorangeyak.co"
+                                        target="_blank" rel="noopener noreferrer">here
+                                    </a>
+                                </p>
+                            </footer>
         </div>
     </main>
     <script src=" clipboard.min.js"></script>
