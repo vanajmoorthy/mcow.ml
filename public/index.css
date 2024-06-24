@@ -374,7 +374,6 @@ footer p {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
-	height: 300px;
 	justify-content: space-evenly;
 	border-radius: 8px;
 	background-color: rgba(27, 64, 94, 1);
