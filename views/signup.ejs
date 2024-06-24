@@ -10,79 +10,68 @@
     <meta name="title" content="mcow.ml">
     <meta name="description" content="A simple, secure, and open-source URL shortener!">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mcow.ml/">
-    <meta property="og:title" content="mcow.ml">
-    <meta property="og:description" content="A simple, secure, and open-source URL shortener!">
-    <meta property="og:image" itemprop="image" content="logo.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://mcow.ml/">
-    <meta property="twitter:title" content="mcow.ml">
-    <meta property="twitter:description" content="A simple, secure, and open-source URL shortener!">
-    <meta property="twitter:image" content="logo.png">
-
     <link href="index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.typekit.net/jdq7cig.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
         integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 
+    <script>
+        function checkPasswords() {
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirm-password');
+            const submitBtn = document.getElementById('signup-btn');
+            const errorDisplay = document.getElementById('password-error');
+
+            if (password.value === confirmPassword.value) {
+                submitBtn.disabled = false;
+                errorDisplay.style.display = 'none'; // Hide error message
+            } else {
+                submitBtn.disabled = true;
+                errorDisplay.style.display = 'block'; // Show error message
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main>
         <div class="flex">
-
             <div class="form-and-title">
                 <div class="heading">
-
-                    <div>
-                        <a href="/" id="home">
-                            <img id="cow" class="cow" src="../logo.png" alt="cow image">
-
-                            <h1>mcow.ml</h1>
-                        </a>
-                    </div>
-
-
-
+                    <a href="/" id="home">
+                        <img id="cow" class="cow" src="../logo.png" alt="cow image">
+                        <h1>mcow.ml</h1>
+                    </a>
                 </div>
             </div>
-
             <div class="login">
                 <h1 class="login-title">Sign Up</h1>
                 <div>
                     <% if (error) {%>
-                    <p class="error">
-                        <%=error%>
-                    </p>
-                    <%}%>
-
+                        <p class="error">
+                            <%=error%>
+                        </p>
+                        <%}%>
                 </div>
                 <form class="login-form" action="/signup" method="post">
                     <input type="email" name="email" id="email" placeholder="Enter email" required>
-
-                    <input type="password" name="password" id="password" placeholder="Enter password" required>
-
-
-
-
-                    <input class="login-button" type="submit" value="SIGN UP" class="login-button">
+                    <input type="password" name="password" id="password" placeholder="Enter password" required
+                        oninput="checkPasswords()">
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password"
+                        required oninput="checkPasswords()">
+                    <p id="password-error" style="display: none; color: red;">Please make sure the passwords match.</p>
+                    <input id="signup-btn" class="login-button" type="submit" value="SIGN UP" disabled>
                 </form>
                 <p>Already a member? <a class="sign-up-link" href="/login">Log in</a> now!</p>
             </div>
-
             <footer>
-                <p>made by <a class="footer-link" href="https://vanajmoorthy.com" target="_blank" rel="noopener noreferrer">vanaj
-                        moorthy</a></p>
-                <p>get source <a class=" footer-link orange" href="https://theorangeyak.co" target="_blank"
-                        rel="noopener noreferrer">here
-                    </a>
-                </p>
+                <p>made by <a class="footer-link" href="https://vanajmoorthy.netlify.app" target="_blank"
+                        rel="noopener noreferrer">vanaj moorthy</a></p>
+                <p>get source <a class="footer-link orange" href="https://github.com/vanajmoorthy/mcow.ml"
+                        target="_blank" rel="noopener noreferrer">here</a></p>
             </footer>
         </div>
     </main>
+</body>
 
 </html>
